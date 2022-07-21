@@ -1,0 +1,30 @@
+{
+  "Title": "Automata",
+  "Type": "game",
+  "Org": "down",
+  "Ident": "automata",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": null,
+  "HasCode": true,
+  "CodePath": "/code/",
+  "RootNamespace": null,
+  "Metadata": {
+    "MapList": [
+      "facepunch.construct"
+    ],
+    "MaxPlayers": 0,
+    "MinPlayers": 0,
+    "GameNetworkType": "Singleplayer",
+    "MapSelect": "Unrestricted",
+    "RankType": "None",
+    "PerMapRanking": false,
+    "LeaderboardType": "None",
+    "Compiler": {
+      "RootNamespace": "Sandbox",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;"
+    }
+  }
+}

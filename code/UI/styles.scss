@@ -1,0 +1,184 @@
+﻿@import "/styles/base.scss";
+@import "/styles/form.scss";
+
+$content-margin: 26px;
+
+.mousedown {
+    pointer-events: none;
+}
+
+.mouseup {
+    pointer-events: all;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    padding: $content-margin;
+}
+
+.play-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    transition: all 0.15s ease;
+    border: 0px solid black;
+
+    &.playing {
+        border: 6px solid rgba(#FFCC00, 0.5);
+        transition: all 0.15s ease;
+    }
+}
+
+.panel {
+    background-color: rgba( black, 0.7 );
+    backdrop-filter: blur( 20px ) hue-rotate( 20deg );
+    border-radius: 8px;
+    min-height: 40px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 350px;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    height: 220px;
+    flex-direction: column;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+    font-weight: 600;
+
+    iconpanel {
+        font-size: 22px;
+        margin-right: 4px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    &:hover {
+        color: rgba( white, 1 );
+        background-color: #0094ff55;
+        color: white;
+    }
+
+    &.active, &:active {
+        background-color: #0094ffaa;
+        color: white;
+        sound-in: ui.button.press;
+    }
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.settings {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+
+.option-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.entry {
+    width: 100%;
+}
+
+.options {
+    flex-direction: column;
+    overflow: scroll;
+    width: 100%;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    min-height: 78px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+.large {
+    height: 80px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+}
+
+.patterns {
+    position: absolute;
+    right: $content-margin;
+    top: $content-margin;
+    width: 280px;
+    height: 100%;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.pattern-list {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 100%;
+}
+
+.pattern-button {
+    margin: 0;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 66px;
+    text-align: left;
+    width: 100%;
+
+    > .label {
+        font-size: 14px;
+        width: 100%;
+        color: #eee;
+    }
+
+    > .title {
+        color: #fff;
+        font-size: 20px;
+    }
+}
